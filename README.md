@@ -14,8 +14,9 @@ data/raw/Base_Migracion_2009-2026jun.xlsx   base de llegadas INGUAT/Migración (
 data/lab10/predictions.csv, metrics.csv     resultados de los modelos, copiados sin cambios de outputs/ del Lab 10
 scripts/export_powerbi.py                   genera las tablas de Power BI
 powerbi/data/*.csv                          tablas que importa el informe (modelo estrella)
+powerbi/observatorio_v1.pbix                informe de Power BI, versión 1 (avance)
 tests/test_export_powerbi.py                consistencia con el Lab 10
-docs/lab12/                                 documento de diseño, planificación y protocolo de pruebas
+docs/lab12/                                 diseño, planificación, protocolo de pruebas y modelo de Power BI (powerbi_avance.md)
 ```
 
 ## Generar las tablas

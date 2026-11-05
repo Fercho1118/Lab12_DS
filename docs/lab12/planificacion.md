@@ -17,9 +17,9 @@ cualquier sistema operativo.
 | 1 | Exportar datos y resultados de los tres modelos a tablas para Power BI, con pruebas de consistencia | Fernando Rueda | 5-nov-2026 | Hecho |
 | 2 | Preguntas, alcance, paleta y tema, fuentes, bosquejo y navegación | Fernando Rueda | 5-nov-2026 | Hecho |
 | 3 | Planificación, criterios de comparación y protocolo de las tres pruebas | Fernando Rueda | 5-nov-2026 | Hecho |
-| 4 | `observatorio_v1.pbix`, importación con Power Query, relaciones y tema | Fernando Hernández | 5-nov-2026 | Pendiente |
-| 5 | Dos visualizaciones enlazadas por filtrado cruzado, V1 y V2 | Fernando Hernández | 5-nov-2026 | Pendiente |
-| 6 | Documentar Power Query, relaciones y medidas DAX del avance | Fernando Hernández | 5-nov-2026 | Pendiente |
+| 4 | `observatorio_v1.pbix`, importación con Power Query, relaciones y tema | Fernando Hernández | 5-nov-2026 | Hecho |
+| 5 | Dos visualizaciones enlazadas por filtrado cruzado, V1 y V2 | Fernando Hernández | 5-nov-2026 | Hecho |
+| 6 | Documentar Power Query, relaciones y medidas DAX del avance | Fernando Hernández | 5-nov-2026 | Hecho |
 | 7 | Completar V3 a V9 en sus páginas | Felipe Aguilar | 7-nov-2026 | Pendiente |
 | 8 | Navegador de páginas, marcadores, segmentadores, Restablecer, selección activa y mensajes sin datos | Felipe Aguilar | 7-nov-2026 | Pendiente |
 | 9 | Jerarquía de fechas con drill down y drill up, página de detalle con drillthrough y regreso | Felipe Aguilar | 7-nov-2026 | Pendiente |
