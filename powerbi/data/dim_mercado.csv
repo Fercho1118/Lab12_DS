@@ -1,0 +1,32 @@
+﻿MercadoId,Mercado,EsExtranjero
+1,Alemania,True
+2,Argentina,True
+3,Australia,True
+4,Belice,True
+5,Brasil,True
+6,Canadá,True
+7,China,True
+8,Colombia,True
+9,Costa Rica,True
+10,El Salvador,True
+11,España,True
+12,Estados Unidos de América,True
+13,Europa,True
+14,Federación de Rusia,True
+15,Francia,True
+16,Guatemala,False
+17,Honduras,True
+18,Israel,True
+19,Italia,True
+20,Japón,True
+21,México,True
+22,Nicaragua,True
+23,Otros Europa,True
+24,Otros Suramérica,True
+25,Panamá,True
+26,Países Bajos,True
+27,Reino Unido de Gran Bretaña e Irlanda del Norte,True
+28,Resto de Centro América,True
+29,Resto de mundo,True
+30,Resto del Mundo,True
+31,Suramérica,True

@@ -1,0 +1,234 @@
+﻿PaisId,País,Región,EsExtranjero
+1,Afganistán,Asia,True
+2,Albania,Europa,True
+3,Alemania,Europa,True
+4,Andorra,Europa,True
+5,Angola,Otros Paises Del Mundo,True
+6,Anguila,Otros Paises Del Mundo,True
+7,Antigua Y Barbuda,América Del Sur y el Caribe,True
+8,Antigua y Barbuda,América Del Sur y el Caribe,True
+9,Arabia Saudita,Oriente Medio,True
+10,Argelia,Otros Paises Del Mundo,True
+11,Argentina,América Del Sur y el Caribe,True
+12,Armenia,Europa,True
+13,Aruba,América Del Sur y el Caribe,True
+14,Australia,Oceanía,True
+15,Austria,Europa,True
+16,Azerbaiyán,Europa,True
+17,Bahamas,América Del Sur y el Caribe,True
+18,Bahrein,Oriente Medio,True
+19,Bangladesh,Asia,True
+20,Barbados,América Del Sur y el Caribe,True
+21,Belice,América Del Centro,True
+22,Benin,Otros Paises Del Mundo,True
+23,Bermuda,América Del Sur y el Caribe,True
+24,Bielorrusia,Europa,True
+25,Bolivia (Estado Plurinacional De),América Del Sur y el Caribe,True
+26,Bolivia (Estado Plurinacional de),América Del Sur y el Caribe,True
+27,Bosnia y Herzegovina,Europa,True
+28,Botswana,Otros Paises Del Mundo,True
+29,Brasil,América Del Sur y el Caribe,True
+30,Brunei Darussalam,Asia,True
+31,Bulgaria,Europa,True
+32,Burkina Faso,Otros Paises Del Mundo,True
+33,Burundi,Otros Paises Del Mundo,True
+34,Bután,Otros Paises Del Mundo,True
+35,Bélgica,Europa,True
+36,Cabo Verde,Otros Paises Del Mundo,True
+37,Camboya,Asia,True
+38,Camerún,Otros Paises Del Mundo,True
+39,Canadá,América Del Norte,True
+40,Chad,Otros Paises Del Mundo,True
+41,Chile,América Del Sur y el Caribe,True
+42,China,Asia,True
+43,"China, Hong Kong Región Administrativa Especial",Asia,True
+44,"China, Macao, Región Administrativa Especial",Asia,True
+45,Chipre,Europa,True
+46,Colombia,América Del Sur y el Caribe,True
+47,Comoras,Otros Paises Del Mundo,True
+48,Congo,Otros Paises Del Mundo,True
+49,Costa Rica,América Del Centro,True
+50,Croacia,Europa,True
+51,Cuba,América Del Sur y el Caribe,True
+52,Côte D'ivoire,Otros Paises Del Mundo,True
+53,Côte d'Ivoire,Otros Paises Del Mundo,True
+54,Dinamarca,Europa,True
+55,Djibouti,Otros Paises Del Mundo,True
+56,Dominica,América Del Sur y el Caribe,True
+57,Ecuador,América Del Sur y el Caribe,True
+58,Egipto,Otros Paises Del Mundo,True
+59,El Salvador,América Del Centro,True
+60,Emiratos Árabes Unidos,Oriente Medio,True
+61,Eritrea,Otros Paises Del Mundo,True
+62,Eslovaquia,Europa,True
+63,Eslovenia,Europa,True
+64,España,Europa,True
+65,Estado de Palestina,Otros Paises Del Mundo,True
+66,Estados Unidos de América,América Del Norte,True
+67,Estonia,Europa,True
+68,Etiopía,Otros Paises Del Mundo,True
+69,Federación De Rusia,Europa,True
+70,Federación de Rusia,Europa,True
+71,Fiji,Oceanía,True
+72,Filipinas,Asia,True
+73,Finlandia,Europa,True
+74,Francia,Europa,True
+75,Gabón,Otros Paises Del Mundo,True
+76,Gambia,Otros Paises Del Mundo,True
+77,Georgia,Europa,True
+78,Ghana,Otros Paises Del Mundo,True
+79,Gibraltar,Europa,True
+80,Granada,América Del Sur y el Caribe,True
+81,Grecia,Europa,True
+82,Groenlandia,Europa,True
+83,Guadalupe,América Del Sur y el Caribe,True
+84,Guam,Oceanía,True
+85,Guatemala,América Del Centro,False
+86,Guayana francés,América Del Sur y el Caribe,True
+87,Guinea,Otros Paises Del Mundo,True
+88,Guinea Ecuatorial,Otros Paises Del Mundo,True
+89,Guinea-Bissau,Otros Paises Del Mundo,True
+90,Guyana,América Del Sur y el Caribe,True
+91,Haití,América Del Sur y el Caribe,True
+92,Honduras,América Del Centro,True
+93,Hungría,Europa,True
+94,India,Asia,True
+95,Indonesia,Asia,True
+96,Irak,Oriente Medio,True
+97,Irlanda,Europa,True
+98,Irán (República Islámica Del),Asia,True
+99,Irán (República Islámica del),Asia,True
+100,Islandia,Europa,True
+101,Islas Caimán,Otros Paises Del Mundo,True
+102,Islas Feroe,Otros Paises Del Mundo,True
+103,Islas Marshall,Oceanía,True
+104,Islas Turcas y Caicos,América Del Sur y el Caribe,True
+105,Islas Vírgenes Americanas,Sin región,True
+106,Islas Vírgenes Británicas,América Del Sur y el Caribe,True
+107,Israel,Oriente Medio,True
+108,Italia,Europa,True
+109,Jamaica,América Del Sur y el Caribe,True
+110,Japón,Asia,True
+111,Jordania,Oriente Medio,True
+112,Katar,Oriente Medio,True
+113,Kazajstán,Europa,True
+114,Kenia,Otros Paises Del Mundo,True
+115,Kirguistán,Europa,True
+116,Kiribati,Oceanía,True
+117,Kuwait,Oriente Medio,True
+118,La ex República Yugoslava de Macedonia,Europa,True
+119,Lesoto,Otros Paises Del Mundo,True
+120,Letonia,Europa,True
+121,Liberia,Otros Paises Del Mundo,True
+122,Libia,Oriente Medio,True
+123,Liechtenstein,Europa,True
+124,Lituania,Europa,True
+125,Luxemburgo,Europa,True
+126,Líbano,Oriente Medio,True
+127,Madagascar,Otros Paises Del Mundo,True
+128,Malasia,Asia,True
+129,Malawi,Otros Paises Del Mundo,True
+130,Maldivas,Asia,True
+131,Malta,Europa,True
+132,Malí,Otros Paises Del Mundo,True
+133,Marruecos,Otros Paises Del Mundo,True
+134,Martinica,América Del Sur y el Caribe,True
+135,Mauricio,Otros Paises Del Mundo,True
+136,Mauritania,Otros Paises Del Mundo,True
+137,Mayotte,Otros Paises Del Mundo,True
+138,Micronesia (Estados Federados De),Oceanía,True
+139,Micronesia (Estados Federados de),Oceanía,True
+140,Mongolia,Asia,True
+141,Montenegro,Europa,True
+142,Montserrat,América Del Sur y el Caribe,True
+143,Mozambique,Otros Paises Del Mundo,True
+144,México,América Del Norte,True
+145,Mónaco,Europa,True
+146,Namibia,Otros Paises Del Mundo,True
+147,Nauru,Oceanía,True
+148,Nepal,Asia,True
+149,Nicaragua,América Del Centro,True
+150,Nigeria,Otros Paises Del Mundo,True
+151,Niue,Otros Paises Del Mundo,True
+152,Noruega,Europa,True
+153,Nueva Caledonia,Oceanía,True
+154,Nueva Zelanda,Oceanía,True
+155,Níger,Otros Paises Del Mundo,True
+156,OTROS PAISES DEL MUNDO,Otros Paises Del Mundo,True
+157,Omán,Oriente Medio,True
+158,Otros Paises Del Mundo,Otros Paises Del Mundo,True
+159,Otros Países de América del Sur,América Del Sur y el Caribe,True
+160,Otros Países de Europa,Europa,True
+161,Pakistán,Asia,True
+162,Palau,Oceanía,True
+163,Panamá,América Del Centro,True
+164,Papúa Nueva Guinea,Oceanía,True
+165,Paraguay,América Del Sur y el Caribe,True
+166,Países Bajos,Europa,True
+167,Perú,América Del Sur y el Caribe,True
+168,Pitcairn,Otros Paises Del Mundo,True
+169,Polinesia francés,Oceanía,True
+170,Polonia,Europa,True
+171,Portugal,Europa,True
+172,Puerto Rico,América Del Sur y el Caribe,True
+173,Reino Unido De Gran Bretaña E Irlanda Del Norte,Europa,True
+174,Reino Unido de Gran Bretaña e Irlanda del Norte,Europa,True
+175,República Centroafricana,Otros Paises Del Mundo,True
+176,República Checa,Europa,True
+177,República De Corea,Asia,True
+178,República De Moldova,Europa,True
+179,República Democrática Popular Lao,Asia,True
+180,República Democrática del Congo,Sin región,True
+181,República Dominicana,América Del Sur y el Caribe,True
+182,República Popular Democrática de Corea,Asia,True
+183,República Unida de Tanzania,Otros Paises Del Mundo,True
+184,República de Corea,Asia,True
+185,República de Kazajistán,Europa,True
+186,República de Moldova,Europa,True
+187,República Árabe Siria,Oriente Medio,True
+188,Resto del Mundo,Asia,True
+189,Ruanda,Otros Paises Del Mundo,True
+190,Rumania,Europa,True
+191,Réunion,Otros Paises Del Mundo,True
+192,Samoa,Oceanía,True
+193,San Cristóbal Y Nieves,América Del Sur y el Caribe,True
+194,San Cristóbal y Nieves,América Del Sur y el Caribe,True
+195,San Marino,Europa,True
+196,San Vicente y las Granadinas,América Del Sur y el Caribe,True
+197,Santa Lucía,América Del Sur y el Caribe,True
+198,Santo Tomé y Príncipe,Otros Paises Del Mundo,True
+199,Senegal,Otros Paises Del Mundo,True
+200,Serbia,Europa,True
+201,Seychelles,Otros Paises Del Mundo,True
+202,Sierra Leona,Otros Paises Del Mundo,True
+203,Singapur,Asia,True
+204,Somalia,Otros Paises Del Mundo,True
+205,Sri Lanka,Asia,True
+206,Sudáfrica,Otros Paises Del Mundo,True
+207,Sudán,Otros Paises Del Mundo,True
+208,Suecia,Europa,True
+209,Suiza,Europa,True
+210,Suriname,América Del Sur y el Caribe,True
+211,Swazilandia,Otros Paises Del Mundo,True
+212,Tailandia,Asia,True
+213,Taiwan,Asia,True
+214,Tayikistán,Europa,True
+215,Timor-Leste,Asia,True
+216,Togo,Otros Paises Del Mundo,True
+217,Tonga,Oceanía,True
+218,Trinidad Y Tobago,América Del Sur y el Caribe,True
+219,Trinidad y Tobago,América Del Sur y el Caribe,True
+220,Turkmenistán,Europa,True
+221,Turquía,Europa,True
+222,Tuvalu,Oceanía,True
+223,Túnez,Otros Paises Del Mundo,True
+224,Ucrania,Europa,True
+225,Uganda,Otros Paises Del Mundo,True
+226,Uruguay,América Del Sur y el Caribe,True
+227,Uzbekistán,Europa,True
+228,Vanuatu,Oceanía,True
+229,Venezuela (República Bolivariana De),América Del Sur y el Caribe,True
+230,Venezuela (República Bolivariana de),América Del Sur y el Caribe,True
+231,Viet Nam,Asia,True
+232,Yemen,Oriente Medio,True
+233,Zambia,Otros Paises Del Mundo,True

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.DS_Store
+~$*
+# archivos temporales de Power BI Desktop
+*.pbix.bak
+.pbi/

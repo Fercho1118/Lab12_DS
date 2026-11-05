@@ -1,0 +1,4 @@
+﻿ModeloId,Modelo,Color,Trazo
+1,"ARIMA(1,1,1)",#6A3D9A,Continua
+2,Holt-Winters,#CC79A7,Raya-punto
+3,Seasonal Naive,#8C8C8C,Punteada
