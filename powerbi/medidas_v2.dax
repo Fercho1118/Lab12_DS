@@ -1,0 +1,123 @@
+// Preparación para observatorio_v2.pbix. No se ha ejecutado en Power BI Desktop.
+// Pegar en Vista de consultas DAX, ejecutar y luego Actualizar modelo con cambios.
+// Reutiliza las medidas y relaciones de v1; no redefine ninguna medida del avance.
+DEFINE
+    MEASURE 'Medidas'[Llegadas mercados en foco] =
+        CALCULATE ( [Llegadas año en foco], KEEPFILTERS ( dim_mercado[EsExtranjero] = TRUE () ) )
+
+    MEASURE 'Medidas'[Llegadas extranjeras] =
+        CALCULATE ( [Llegadas], KEEPFILTERS ( dim_pais[EsExtranjero] = TRUE () ) )
+
+    // Tarjeta de Detalle de país: denominador global, no solo la región seleccionada.
+    MEASURE 'Medidas'[Peso país sobre extranjeros] =
+        DIVIDE ( [Llegadas extranjeras],
+            CALCULATE ( [Llegadas extranjeras], REMOVEFILTERS ( dim_pais ) ) )
+
+    MEASURE 'Medidas'[Índice estacional] =
+        VAR anio = SELECTEDVALUE ( dim_fecha[Año] )
+        VAR mes = SELECTEDVALUE ( dim_fecha[Mes] )
+        VAR mesesConDatos = CALCULATE ( DISTINCTCOUNT ( fact_llegadas[FechaId] ),
+            REMOVEFILTERS ( dim_fecha ), dim_fecha[Año] = anio )
+        VAR totalAnual = CALCULATE ( [Llegadas],
+            REMOVEFILTERS ( dim_fecha ), dim_fecha[Año] = anio )
+        RETURN IF ( NOT ISBLANK ( anio ) && NOT ISBLANK ( mes ) && mesesConDatos = 12,
+            100 * DIVIDE ( [Llegadas], DIVIDE ( totalAnual, 12 ) ) )
+
+    MEASURE 'Medidas'[Índice año en foco] =
+        VAR anio = [Año en foco]
+        VAR mes = SELECTEDVALUE ( dim_fecha[Mes] )
+        RETURN IF ( NOT ISBLANK ( anio ) && NOT ISBLANK ( mes ),
+            CALCULATE ( [Índice estacional], REMOVEFILTERS ( dim_fecha ),
+                dim_fecha[Año] = anio, dim_fecha[Mes] = mes ) )
+
+    // V8: historia completa de las vías elegidas, sin 2020–2021 ni años incompletos.
+    // El año en foco NO limita la población de referencia a un único año.
+    MEASURE 'Medidas'[Perfil mediana] =
+        VAR mes = SELECTEDVALUE ( dim_fecha[Mes] )
+        VAR anios = FILTER ( CALCULATETABLE ( VALUES ( dim_fecha[Año] ), REMOVEFILTERS ( dim_fecha ) ),
+            NOT ( dim_fecha[Año] IN { 2020, 2021 } ) )
+        VAR perfil = ADDCOLUMNS ( anios, "@indice",
+            VAR anio = dim_fecha[Año]
+            RETURN CALCULATE ( [Índice estacional], REMOVEFILTERS ( dim_fecha ),
+                dim_fecha[Año] = anio, dim_fecha[Mes] = mes ) )
+        RETURN IF ( NOT ISBLANK ( mes ), MEDIANX ( FILTER ( perfil, NOT ISBLANK ( [@indice] ) ), [@indice] ) )
+
+    MEASURE 'Medidas'[Perfil mínimo] =
+        VAR mes = SELECTEDVALUE ( dim_fecha[Mes] )
+        VAR anios = FILTER ( CALCULATETABLE ( VALUES ( dim_fecha[Año] ), REMOVEFILTERS ( dim_fecha ) ),
+            NOT ( dim_fecha[Año] IN { 2020, 2021 } ) )
+        VAR perfil = ADDCOLUMNS ( anios, "@indice",
+            VAR anio = dim_fecha[Año]
+            RETURN CALCULATE ( [Índice estacional], REMOVEFILTERS ( dim_fecha ),
+                dim_fecha[Año] = anio, dim_fecha[Mes] = mes ) )
+        RETURN IF ( NOT ISBLANK ( mes ), MINX ( FILTER ( perfil, NOT ISBLANK ( [@indice] ) ), [@indice] ) )
+
+    MEASURE 'Medidas'[Perfil máximo] =
+        VAR mes = SELECTEDVALUE ( dim_fecha[Mes] )
+        VAR anios = FILTER ( CALCULATETABLE ( VALUES ( dim_fecha[Año] ), REMOVEFILTERS ( dim_fecha ) ),
+            NOT ( dim_fecha[Año] IN { 2020, 2021 } ) )
+        VAR perfil = ADDCOLUMNS ( anios, "@indice",
+            VAR anio = dim_fecha[Año]
+            RETURN CALCULATE ( [Índice estacional], REMOVEFILTERS ( dim_fecha ),
+                dim_fecha[Año] = anio, dim_fecha[Mes] = mes ) )
+        RETURN IF ( NOT ISBLANK ( mes ), MAXX ( FILTER ( perfil, NOT ISBLANK ( [@indice] ) ), [@indice] ) )
+
+    MEASURE 'Medidas'[Observado una serie] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ), [Observado serie] )
+
+    // Una medida por curva evita repetir/sumar el observado por cada modelo.
+    // KEEPFILTERS hace que desmarcar un modelo también oculte su curva.
+    MEASURE 'Medidas'[Predicción ARIMA] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ),
+            CALCULATE ( [Estimado], KEEPFILTERS ( dim_modelo[ModeloId] = 1 ) ) )
+
+    MEASURE 'Medidas'[Predicción Holt-Winters] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ),
+            CALCULATE ( [Estimado], KEEPFILTERS ( dim_modelo[ModeloId] = 2 ) ) )
+
+    MEASURE 'Medidas'[Predicción Seasonal Naive] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ),
+            CALCULATE ( [Estimado], KEEPFILTERS ( dim_modelo[ModeloId] = 3 ) ) )
+
+    MEASURE 'Medidas'[MAE período visible] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ) && HASONEVALUE ( dim_modelo[ModeloId] ),
+            AVERAGE ( fact_predicciones[ErrorAbs] ) )
+
+    MEASURE 'Medidas'[Error firmado medio] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ) && HASONEVALUE ( dim_modelo[ModeloId] ),
+            AVERAGE ( fact_predicciones[Error] ) )
+
+    MEASURE 'Medidas'[Meses visibles de evaluación] =
+        IF ( HASONEVALUE ( dim_serie[Serie] ), DISTINCTCOUNT ( fact_predicciones[FechaId] ) )
+
+    MEASURE 'Medidas'[Selección de llegadas] =
+        "Años: " & IF ( ISFILTERED ( dim_fecha[Año] ),
+            CONCATENATEX ( VALUES ( dim_fecha[Año] ), dim_fecha[Año], ", ", dim_fecha[Año], ASC ),
+            "todos (detalle de Panorama: último año completo)" )
+        & " · Vías: " & CONCATENATEX ( VALUES ( dim_frontera[Vía] ), dim_frontera[Vía], ", " )
+
+    MEASURE 'Medidas'[Título V3] =
+        IF ( ISBLANK ( [Llegadas mercados en foco] ), "Sin registros para esta selección",
+            "Diez mercados principales · " & [Años en foco texto] )
+
+    MEASURE 'Medidas'[Estado llegadas] =
+        IF ( ISBLANK ( [Llegadas] ), "No hay registros. Cambie el año o la vía.",
+            "Observado · 2026 contiene solo enero a junio." )
+
+    MEASURE 'Medidas'[Estado perfil] =
+        VAR anio = [Año en foco]
+        VAR meses = CALCULATE ( DISTINCTCOUNT ( fact_llegadas[FechaId] ),
+            REMOVEFILTERS ( dim_fecha ), dim_fecha[Año] = anio )
+        RETURN IF ( ISBLANK ( anio ), "Seleccione un solo año para la línea de comparación.",
+            IF ( meses <> 12, "El año elegido no tiene doce meses: no se dibuja su índice.",
+                "Índice 100 = mes promedio del año. Banda histórica sin 2020–2021 ni años incompletos." ) )
+
+    MEASURE 'Medidas'[Estado pronósticos] =
+        IF ( NOT HASONEVALUE ( dim_serie[Serie] ), "Seleccione una sola serie.",
+            IF ( ISBLANK ( [Observado serie] ), "Sin registros para este período.",
+                IF ( COUNTROWS ( fact_predicciones ) = 0,
+                    "Período sin predicciones evaluadas; puede mostrar observaciones de entrenamiento.",
+                    "Errores del período visible; tabla de métricas del conjunto completo abr-2021 a jun-2026." ) ) )
+
+EVALUATE
+    ROW ( "Estado", "Medidas preparadas: ejecutar verificar_v2.dax después de agregarlas al modelo." )

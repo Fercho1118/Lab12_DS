@@ -41,3 +41,18 @@ python -m unittest tests.test_export_powerbi -v
 | `fact_predicciones` | serie × mes × modelo | **Predicciones** de los tres modelos con su error (V4, V9) |
 | `fact_metricas` | serie × modelo | **Métricas** MAE, RMSE y MAPE del conjunto de prueba |
 | `dim_serie`, `dim_modelo` | | Selector de serie; color y trazo de cada modelo |
+
+## Preparación de la versión 2
+
+La versión ejecutable disponible sigue siendo `powerbi/observatorio_v1.pbix`. Para completar la
+siguiente versión en Windows, seguir [la guía de montaje](docs/lab12/powerbi_final.md): incluye
+campos de V3–V9, interacciones, marcadores Restablecer, detalle de país y comprobaciones pendientes.
+
+- [Medidas DAX nuevas](powerbi/medidas_v2.dax): pegar en Vista de consultas DAX y agregar al modelo.
+- [Consulta de verificación](powerbi/verificar_v2.dax): 16 casos para ejecutar después de agregarlas.
+- [Diseño, secciones 9 y 10](docs/lab12/diseno.md#9-justificación-de-las-visualizaciones-apartado-43):
+  redacción de los apartados 4.3 y 4.5 del enunciado, sin firma personal.
+
+Las 11 pruebas de consistencia de CSV pasan. Las medidas preparadas aún **no se ejecutaron en
+Power BI** y no se modificó el `.pbix`: crear `observatorio_v2.pbix` con Guardar como, comprobarlo
+en Desktop y conservar la versión anterior. La planificación distingue lo preparado de lo terminado.

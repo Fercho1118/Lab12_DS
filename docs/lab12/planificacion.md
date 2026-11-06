@@ -20,16 +20,22 @@ cualquier sistema operativo.
 | 4 | `observatorio_v1.pbix`, importación con Power Query, relaciones y tema | Fernando Hernández | 5-nov-2026 | Hecho |
 | 5 | Dos visualizaciones enlazadas por filtrado cruzado, V1 y V2 | Fernando Hernández | 5-nov-2026 | Hecho |
 | 6 | Documentar Power Query, relaciones y medidas DAX del avance | Fernando Hernández | 5-nov-2026 | Hecho |
-| 7 | Completar V3 a V9 en sus páginas | Felipe Aguilar | 7-nov-2026 | Pendiente |
-| 8 | Navegador de páginas, marcadores, segmentadores, Restablecer, selección activa y mensajes sin datos | Felipe Aguilar | 7-nov-2026 | Pendiente |
-| 9 | Jerarquía de fechas con drill down y drill up, página de detalle con drillthrough y regreso | Felipe Aguilar | 7-nov-2026 | Pendiente |
-| 10 | Página de pronósticos con predicciones, errores y métricas | Felipe Aguilar | 7-nov-2026 | Pendiente |
-| 11 | Justificación de las visualizaciones y de la incorporación de los modelos, secciones 4.3 y 4.5 | Felipe Aguilar | 7-nov-2026 | Pendiente |
+| 7 | Completar V3 a V9 en sus páginas | Felipe Aguilar | 7-nov-2026 | Medidas y montaje preparados; pendiente Desktop |
+| 8 | Navegador de páginas, marcadores, segmentadores, Restablecer, selección activa y mensajes sin datos | Felipe Aguilar | 7-nov-2026 | Guía y textos preparados; pendiente Desktop |
+| 9 | Jerarquía de fechas con drill down y drill up, página de detalle con drillthrough y regreso | Felipe Aguilar | 7-nov-2026 | Jerarquía de V1 ya en v1; detalle y pruebas pendientes |
+| 10 | Página de pronósticos con predicciones, errores y métricas | Felipe Aguilar | 7-nov-2026 | DAX y controles preparados; pendiente Desktop |
+| 11 | Justificación de las visualizaciones y de la incorporación de los modelos, secciones 4.3 y 4.5 | Felipe Aguilar | 7-nov-2026 | Redactado; contrastar con v2 al implementarla |
 | 12 | Matriz de comparación, costos, licencias y condiciones de distribución | Nicolás Concuá | 8-nov-2026 | Pendiente |
 | 13 | Ejecutar las tres pruebas en Dash y Power BI y verificar los dos indicadores | Nicolás Concuá | 8-nov-2026 | Pendiente |
 | 14 | Recomendaciones por escenario, README final e informe PDF | Nicolás Concuá | 8-nov-2026 | Pendiente |
 
 Cada responsable cambia el estado de sus tareas en el mismo commit en que las termina.
+
+Preparación del 6-nov: [guía de montaje y pendientes](powerbi_final.md),
+`powerbi/medidas_v2.dax` y `powerbi/verificar_v2.dax`. Las secciones 9 y 10 de `diseno.md`
+corresponden a 4.3 y 4.5 del enunciado. No se modificó `observatorio_v1.pbix` ni se creó una v2
+sin verificar. Los estados anteriores distinguen preparación de implementación; las horas deben
+registrarse por quien realiza el trabajo, no inferirse del historial ni inventarse.
 
 ## Tiempo de trabajo efectivo por herramienta
 
